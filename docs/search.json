@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome!",
+    "section": "",
+    "text": "LESYMAP Installation (macOS)\n\n\n\n\n\n\nR\n\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nErica Adezati\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "Contacts.html",
+    "href": "Contacts.html",
+    "title": "Contacts",
+    "section": "",
+    "text": "Email\n\nUniversity\ns1722393@ed.ac.uk\n\n\nPersonal\ne.adezati@gmail.com"
+  },
+  {
+    "objectID": "Projects.html",
+    "href": "Projects.html",
+    "title": "Research",
+    "section": "",
+    "text": "My current research focuses on the neural processing of narrative language. I study the neural basis of narrative comprehension, as well as spoken functional communication (the ability to convey an intended message) in individuals with post-stroke aphasia.\n\nPublications\n\nAdezati, E., Liu, X., Ding, J., Thye, M., Szaflarski, J. P., & Mirman, D. (2024). Phase synchronization during the processing of taxonomic and thematic relations. Brain and Language, 249, 105379. https://doi.org/10.1016/j.bandl.2024.105379\nAdezati, E., Thye, M., Edmondson-Stait, A. J., Szaflarski, J. P., & Mirman, D. (2022). Lesion correlates of auditory sentence comprehension deficits in post-stroke aphasia. Neuroimage: Reports, 2(1), 100076. https://doi.org/10.1016/j.ynirp.2021.100076"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Teaching.html",
+    "href": "Teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Teaching Experience\n\nUndergraduate\nPsychology 1 and Psychology 2, The University of Edinburgh.\n\n\nHonours and Masters\nThe School of Philosophy, Psychology and Language Sciences (PPLS) Skills Centre, The University of Edinburgh (https://skillscentre.ppls.ed.ac.uk/page/2/)."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I am a Psychology PhD student at the University of Edinburgh.\nI am part of the Language and Cognitive Dynamics Laboratory (https://www.danmirman.org/Home)."
+  },
+  {
+    "objectID": "OpenScience.html",
+    "href": "OpenScience.html",
+    "title": "Open Science",
+    "section": "",
+    "text": "Statement\n\n\nResources"
+  },
+  {
+    "objectID": "posts/lesymap/index.html",
+    "href": "posts/lesymap/index.html",
+    "title": "LESYMAP Installation (macOS)",
+    "section": "",
+    "text": "LESYMAP is a useful package that allows you to conduct Lesion to Symptom Mapping in R.\nIn the past, other people and I have experienced difficulties when installing this package. In this post, I describe the steps that I followed to install LESYMAP on a Mac operating system (Sequoia 15.5).\n\nStep 1\nInstall cmake https://cmake.org\n\n\nStep 2\nAdd cmake to your path in the R Studio Terminal\ntouch ~/.zshrc  #creates zshrc file\nopen -e ~/.zshrc #opens file\nexport PATH=\"/Applications/CMake.app/Contents/bin:$PATH\" #adds path\nsource ~/.zshrc #save\ncmake --version #check that cmake is on path\n\n\nStep 3\nInstall Gfortran https://github.com/R-macos/gcc-14-branch/releases\n\n\nStep 4\nFrom the R Studio Console, install the required packages\nmylist = c(\"Rcpp\", \"RcppArmadillo\", \"graphics\", \"grDevices\", \n           \"magic\", \"magrittr\", \"misc3d\", \"pixmap\",\n           \"psych\", \"rsvd\", \"stats\", \"utils\", \n           \"lmPerm\", \"nparcomp\" )\nneedindx =  ! mylist %in% installed.packages()\nif (any(needindx)) install.packages(mylist[needindx])\n\n\nStep 5\nInstall LESYMAP and dependencies from the Terminal\ngit clone https://github.com/stnava/ITKR.git\ngit clone https://github.com/stnava/ANTsRCore.git\ngit clone https://github.com/stnava/ANTsR.git\ngit clone https://github.com/dorianps/LESYMAP.git\nR CMD INSTALL ITKR\nR CMD INSTALL ANTsRCore\nR CMD INSTALL ANTsR\nR CMD INSTALL LESYMAP\n\n\nStep 6\nTest the installation, as described in the package documentation: https://github.com/dorianps/LESYMAP/wiki/Testing-LESYMAP-installation\n\nHelpful Pages\n\nhttps://github.com/dorianps/LESYMAP/wiki/Lesymap-Installation\nhttps://stackoverflow.com/questions/11530090/adding-a-new-entry-to-the-path-variable-in-zsh\nhttps://stnava.github.io/ANTsR/\nhttps://cran.r-project.org/bin/macosx/tools/"
+  }
+]
