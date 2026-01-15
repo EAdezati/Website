@@ -1,0 +1,60 @@
+---
+title: "LESYMAP Installation (macOS)"
+author: "Erica Adezati"
+date: "2026-01-15"
+categories: [R]
+image: "R.jpeg"
+---
+
+LESYMAP is a useful package that allows you to conduct Lesion to Symptom Mapping in R. 
+
+In the past, other people and I have experienced difficulties when installing this package. In this post, I describe the steps that I followed to install LESYMAP on a Mac operating system (Sequoia 15.5). 
+
+### Step 1
+Install cmake <https://cmake.org>
+
+### Step 2
+Add cmake to your path in the R Studio Terminal
+```bash
+touch ~/.zshrc  #creates zshrc file
+open -e ~/.zshrc #opens file
+export PATH="/Applications/CMake.app/Contents/bin:$PATH" #adds path
+source ~/.zshrc #save
+cmake --version #check that cmake is on path
+```
+
+### Step 3
+Install Gfortran <https://github.com/R-macos/gcc-14-branch/releases>
+
+### Step 4
+From the R Studio Console, install the required packages
+```r
+mylist = c("Rcpp", "RcppArmadillo", "graphics", "grDevices", 
+           "magic", "magrittr", "misc3d", "pixmap",
+           "psych", "rsvd", "stats", "utils", 
+           "lmPerm", "nparcomp" )
+needindx =  ! mylist %in% installed.packages()
+if (any(needindx)) install.packages(mylist[needindx])
+```
+### Step 5
+Install LESYMAP and dependencies from the Terminal
+```bash
+git clone https://github.com/stnava/ITKR.git
+git clone https://github.com/stnava/ANTsRCore.git
+git clone https://github.com/stnava/ANTsR.git
+git clone https://github.com/dorianps/LESYMAP.git
+R CMD INSTALL ITKR
+R CMD INSTALL ANTsRCore
+R CMD INSTALL ANTsR
+R CMD INSTALL LESYMAP
+```
+
+### Step 6
+Test the installation, as described in the package documentation:
+<https://github.com/dorianps/LESYMAP/wiki/Testing-LESYMAP-installation>
+
+#### Helpful Pages
+- <https://github.com/dorianps/LESYMAP/wiki/Lesymap-Installation>
+- <https://stackoverflow.com/questions/11530090/adding-a-new-entry-to-the-path-variable-in-zsh>
+- <https://stnava.github.io/ANTsR/>
+- <https://cran.r-project.org/bin/macosx/tools/>

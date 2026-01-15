@@ -1,0 +1,18 @@
+---
+title: "About Me"
+image: profile_pic.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/erica-adezati
+    - icon: github
+      text: Github
+      href: https://github.com/EAdezati
+
+---
+
+I am a Psychology PhD student at the University of Edinburgh. 
+
+I am part of the Language and Cognitive Dynamics Laboratory (<https://www.danmirman.org/Home>).
