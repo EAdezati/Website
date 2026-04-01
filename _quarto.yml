@@ -11,6 +11,8 @@ website:
       - Contacts.qmd
       - icon: linkedin
         href: https://www.linkedin.com/in/erica-adezati
+      - icon: r-square
+        href: https://www.researchgate.net/profile/Erica-Adezati
 format:
   html:
     theme:

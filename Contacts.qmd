@@ -1,13 +1,14 @@
 ---
 title: "Contacts"
 ---
+<br> 
 
 ### Email
 
-#### University
-s1722393@ed.ac.uk
+#### **University of Edinburgh:**
+eadezati@ed.ac.uk
 
-#### Personal
+#### **Personal:**
 e.adezati@gmail.com
 
 
