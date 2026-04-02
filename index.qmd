@@ -1,14 +1,38 @@
 ---
-title: "Welcome!"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
+title: "About Me"
+image: profile_pic.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/erica-adezati
+    - icon: r-square
+      text: ResearchGate
+      href: https://www.researchgate.net/profile/Erica-Adezati
+
 ---
 
+I am a Psychology PhD student at the University of Edinburgh. I am part of the Language and Cognitive Dynamics Laboratory (<https://www.danmirman.org/Home>).
 
+<br>
+
+### Education
+
+**MSc in Psychological Research (Distinction) | Sept 2021 - Sept 2022**
+
+University of Edinburgh (School of Philosophy, Psychology and Language Sciences) | Edinburgh, Scotland
+
+<br>
+
+**MA in Psychology and Linguistics (First Class with Honours) | Sept 2017 - May 2021**
+
+University of Edinburgh (School of Philosophy, Psychology and Language Sciences) | Edinburgh, Scotland
+
+<br>
+
+### Experience
+
+**Research Assistant  | Nov 2022 - Aug 2023**
+
+University of Glasgow (School of Psychology and Neuroscience) | Glasgow, Scotland

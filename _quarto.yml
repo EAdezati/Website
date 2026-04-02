@@ -8,6 +8,7 @@ website:
       - about.qmd
       - Projects.qmd
       - Teaching.qmd
+      - Blog.qmd
       - Contacts.qmd
       - icon: linkedin
         href: https://www.linkedin.com/in/erica-adezati
